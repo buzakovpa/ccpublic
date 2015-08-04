@@ -4,7 +4,7 @@ using CC.EF;
 namespace CC.BUSINESS
 {
 
-    internal abstract class BaseEntityService : IDisposable
+    public abstract class BaseEntityService : IDisposable
     {
         protected AppContext Context;
 

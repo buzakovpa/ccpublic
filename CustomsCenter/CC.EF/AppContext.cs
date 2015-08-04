@@ -10,6 +10,14 @@ namespace CC.EF
     public class AppContext : DbContext
     {
 
+        #region Shop
+
+        public IDbSet<ShopCategory> ShopCategories { get; set; }
+        public IDbSet<ShopProduct> ShopProducts { get; set; }
+        public IDbSet<ShopProductReview> ShopProductReviews { get; set; }
+
+        #endregion // Shop
+
         public IDbSet<UiElement> UiElements { get; set; }
         public IDbSet<UiImage> UiImages { get; set; }
 
@@ -22,6 +30,10 @@ namespace CC.EF
         {
             modelBuilder.Configurations.Add(new UiElementEntityConfiguration());
             modelBuilder.Configurations.Add(new UiImageEntityConfiguration( ));
+
+            modelBuilder.Configurations.Add(new ShopCategoryEntityConfiguration());
+            modelBuilder.Configurations.Add(new ShopProductEntityConfiguration( ));
+            modelBuilder.Configurations.Add(new ShopProductReviewEntityConfiguration( ));
 
             base.OnModelCreating(modelBuilder);
         }

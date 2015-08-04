@@ -53,6 +53,9 @@
     <Compile Include="BaseEntityService.cs" />
     <Compile Include="BusinessNinjectModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shop\IShopCategoryService.cs" />
+    <Compile Include="Shop\IShopProductReviewService.cs" />
+    <Compile Include="Shop\ShopProductReviewService.cs" />
     <Compile Include="UiElementService.cs" />
     <Compile Include="IUiElementService.cs" />
   </ItemGroup>

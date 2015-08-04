@@ -91,7 +91,7 @@
     <LessCompileToFolder>true</LessCompileToFolder>
     <LessGenerateCssFile>true</LessGenerateCssFile>
     <LessMinify>true</LessMinify>
-    <LessShowPreviewWindow>true</LessShowPreviewWindow>
+    <LessShowPreviewWindow>false</LessShowPreviewWindow>
     <LessStrictMath>true</LessStrictMath>
     <ScssGenerateCssFile>True</ScssGenerateCssFile>
     <ScssMinify>True</ScssMinify>

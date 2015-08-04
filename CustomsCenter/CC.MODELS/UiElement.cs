@@ -1,4 +1,6 @@
-﻿namespace CC.MODELS
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CC.MODELS
 {
 
     public class UiElement
@@ -12,8 +14,8 @@
 
         public enum Aliass : int
         {
-            Shop = 10,
-            ShopDetails = 11,
+            [Display(Name = @"Магазин")] Shop = 10,
+            [Display(Name = @"Детали магазина")] ShopDetails = 11,
 
             AdminShop = 110,
             AdminShopDetails = 111,

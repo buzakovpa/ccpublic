@@ -92,3 +92,17 @@ C:\Users\Pavel\YandexDisk\Project\CustomsCenter\CC.OIL.IMPORT\bin\Debug\EntityFr
 C:\Users\Pavel\YandexDisk\Project\CustomsCenter\CC.OIL.IMPORT\obj\Debug\CC.OIL.IMPORT.csprojResolveAssemblyReference.cache
 C:\Users\Pavel\YandexDisk\Project\CustomsCenter\CC.OIL.IMPORT\obj\Debug\CC.OIL.IMPORT.exe
 C:\Users\Pavel\YandexDisk\Project\CustomsCenter\CC.OIL.IMPORT\obj\Debug\CC.OIL.IMPORT.pdb
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\bin\Debug\CC.EF.dll
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\bin\Debug\CC.MODELS.dll
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\bin\Debug\EntityFramework.dll
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\bin\Debug\CC.EF.pdb
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\bin\Debug\CC.MODELS.pdb
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\bin\Debug\EntityFramework.xml
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\obj\Debug\CC.OIL.IMPORT.csprojResolveAssemblyReference.cache
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\obj\Debug\CC.OIL.IMPORT.exe
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\obj\Debug\CC.OIL.IMPORT.pdb
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\bin\Debug\CC.OIL.IMPORT.exe.config
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\bin\Debug\CC.OIL.IMPORT.exe
+C:\Users\buzakovpa\Documents\GitHub\ccpublic\CustomsCenter\CC.OIL.IMPORT\bin\Debug\CC.OIL.IMPORT.pdb

@@ -48,6 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContext.cs" />
+    <Compile Include="Configurations\ShopCategoryEntityConfiguration.cs" />
+    <Compile Include="Configurations\ShopProductEntityConfiguration.cs" />
+    <Compile Include="Configurations\ShopProductReviewEntityConfiguration.cs" />
     <Compile Include="Configurations\UiElementEntityConfiguration.cs" />
     <Compile Include="Configurations\UiImageEntityConfiguration.cs" />
     <Compile Include="Migrations\201508021048489_Init.cs" />
@@ -57,6 +60,10 @@
     <Compile Include="Migrations\201508021527315_AddUiImageModel.cs" />
     <Compile Include="Migrations\201508021527315_AddUiImageModel.Designer.cs">
       <DependentUpon>201508021527315_AddUiImageModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508042302458_AddShopModels.cs" />
+    <Compile Include="Migrations\201508042302458_AddShopModels.Designer.cs">
+      <DependentUpon>201508042302458_AddShopModels.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201508021527315_AddUiImageModel.resx">
       <DependentUpon>201508021527315_AddUiImageModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508042302458_AddShopModels.resx">
+      <DependentUpon>201508042302458_AddShopModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
