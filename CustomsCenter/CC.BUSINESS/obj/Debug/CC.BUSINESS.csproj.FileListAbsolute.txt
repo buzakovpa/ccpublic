@@ -1,0 +1,16 @@
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\CC.BUSINESS.dll.config
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\CC.BUSINESS.dll
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\CC.BUSINESS.pdb
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\CC.EF.dll
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\CC.MODELS.dll
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\EntityFramework.dll
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\Ninject.dll
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\CC.EF.pdb
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\CC.MODELS.pdb
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\EntityFramework.xml
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\bin\Debug\Ninject.xml
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\obj\Debug\CC.BUSINESS.csprojResolveAssemblyReference.cache
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\obj\Debug\CC.BUSINESS.dll
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.BUSINESS\obj\Debug\CC.BUSINESS.pdb

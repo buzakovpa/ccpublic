@@ -1,0 +1,719 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{456A6552-6E17-4D12-8625-2664463B242C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CC.OIL.IMPORT</RootNamespace>
+    <AssemblyName>CC.OIL.IMPORT</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CC.OIL.IMPORT.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IImport.cs" />
+    <Compile Include="JsonObjects\MakeJsonObject.cs" />
+    <Compile Include="MakesImport.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CC.EF\CC.EF.csproj">
+      <Project>{6c072b19-55a7-4c5a-b660-4299dfffc371}</Project>
+      <Name>CC.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CC.MODELS\CC.MODELS.csproj">
+      <Project>{d40d4e91-36c8-49a0-9527-c714b77fa4fe}</Project>
+      <Name>CC.MODELS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="AppData\ALL\result_DAIHATSU.json" />
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_ATRAI VAN_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_ATRAI WAGON_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_ATRAI-7_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_CHARADE_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_COPEN_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_HIJET ATRAI_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_HIJET CARGO_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_HIJET GRAND CARGO_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_HIJET PANEL VAN_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_HIJET TRUCK_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_HIJET VAN_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_MAX_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_MIDJET II_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_MIRA GINO 1_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_MIRA GINO_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_MIRA SEDAN 3DOOR_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_MIRA SEDAN 5DOOR_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_MIRA SEDAN_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_MIRA VAN_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_MOVE CUSTOM &amp; AIR_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_MOVE CUSTOM_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_MOVE LATTE_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_MOVE_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_NAKED_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_OPTI_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_PYZAR_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_STORIA 1_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_STORIA_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_TANTO_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_TERIOS KID_LUCIA_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_TERIOS_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_YRV 1_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\RESULT\DAIHATSU\result_DAIHATSU_YRV_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="AppData\ALL\result_HONDA.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ACCORD 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ACCORD COUPE_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ACCORD WAGON_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ACCORD_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ACTY TRUCK_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ARTNER_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ASCOT 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ASCOT INNOVA 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ASCOT INNOVA_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ASCOT_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_AVANSIER 3_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_AVANSIER_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_CAPA_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_CIVIC COUPE_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_CIVIC FERIO_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_CIVIC HYBRID_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_CIVIC_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_CR-V 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_CR-X DELSOL_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_EDIX 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_EDIX_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ELEMENT_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ELISION 3_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ELISION_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_FIT ARIA_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_FIT_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_HR-V 2DOOR_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_HR-V 4DOOR_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_INSIGHT 1_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_INSPIRE 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_INSPIRE 3_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_INSPIRE_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_INTEGRA 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_INTEGRA SJ_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_INTEGRA_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_LAGREAT_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_LEGEND_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_LIFE DUNK_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_LIFE_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_LOGO_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_MDX_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_MOBILIO SPIKE_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_MOBILIO_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_NSX 3_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_NSX_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ODYSSEY 3_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ODYSSEY_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ORTHIA 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ORTHIA_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_PARTNER_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_PRELUDE_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_RAFAGA 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_RAFAGA_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_RELUDE_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_S-MX 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_S2000 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_SABER 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_SABER_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_STEP WAGON 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_STEP WAGON SPURD 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_STEP WAGON SPURD_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_STEP WAGON_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_STREAM 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_STREAM_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_STREET_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_TODAY ASSOCIE_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_TORNEO 2_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_TORNEO_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_VAMOS HOBIO_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_VAMOS_.json" />
+    <None Include="AppData\RESULT\HONDA\result_HONDA_ZUTS_.json" />
+    <None Include="AppData\ALL\result_MAZDA.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_ALTENZA 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_ALTENZA SPORT WAGON 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_ALTENZA SPORT WAGON_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_ALTENZA_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_AXELA_AXELA SPORT 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_AXELA_AXELA SPORT_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_AZ-OFF ROAD_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_AZ-WAGON_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_BERRISA_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_BONGO BRAWNY 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_BONGO BRAWNY_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_BONGO FRIENDEE 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_BONGO FRIENDEE_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_BONGO_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_CAPPELLA 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_CAPPELLA WAGON 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_CAPPELLA WAGON_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_CAPPELLA_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_CAROL_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_DEMIO_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_EUNOS 800_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_FAMILIA NEO_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_FAMILIA SEDAN 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_FAMILIA SEDAN_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_FAMILIA VAN 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_FAMILIA VAN_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_FAMILIA WAGON 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_FAMILIA WAGON_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_LAPUTA_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_MILLENIA 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_MILLENIA_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_MPV 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_MPV 3_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_MPV_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_PREMACY 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_PREMACY_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_PROCEED LEVANTE 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_PROCEED LEVANTE_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_ROADSTER%28EUNOS%29_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_ROADSTER_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_RX-7_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_RX-8_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_SCRUM TRUCK_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_SCRUM VAN_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_SCRUM WAGON_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_SENTIA 3_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_SPIANO_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_TRIBUTE 2_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_TRIBUTE 3_.json" />
+    <None Include="AppData\RESULT\MAZDA\result_MAZDA_TRIBUTE_.json" />
+    <None Include="AppData\ALL\result_MITSUBISHI.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_AIRTREK_AIRTREK SPORT GEAR 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_AIRTREK_AIRTREK SPORT GEAR_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_ASPIRE 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_ASPIRE_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_BRABO_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_CHALLENGER 3_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_CHALLENGER_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_CHARIOT GRANDIS 3_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_CHARIOT GRANDIS_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_CHARISMA_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_COLT_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DEBONAIR 3_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DEBONAIR_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DELICA CARGO 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DELICA CARGO_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DELICA SPACE GEAR 3_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DELICA SPACE GEAR_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DELICA VAN _ TRUCK 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DELICA VANTRUCK_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DIAMANTE 3_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DIAMANTE WAGON 3_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DIAMANTE_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DIGNITY_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DION 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_DION_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_ECLIPSE 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_EK ACTIVE_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_EK CLASSY_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_EK SPORT_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_EK WAGON_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_FTO 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_FTO_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_GALLANT 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_GALLANT_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_GRANDIS_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_GTO 3_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LANCER 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LANCER CARGO_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LANCER EVOLUTION IV 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LANCER EVOLUTION VII 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LANCER EVOLUTION VIII 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LANCER EVOLUTION_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LANCER WAGON_CEDIA WAGON_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LANCER_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LANCER_LANCER CEDIA_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LEGNUM 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LEGNUM_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LIBERO CARGO 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LIBERO CARGO_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LIBERO WAGON 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_LIBERO WAGON_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_MINICA TOPPO_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_MINICAB PANEL VAN_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_MINICAB TRUCK DUMP_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_MINICAB VAN_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_MINICA_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_MIRAGE ASTI_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_MIRAGE DINGO_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_MIRAGE HATCHBACK_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_MIRAGE SEDAN 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_MIRAGE SEDAN_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_PAJERO 3_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_PAJERO IO 2_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_PAJERO IO JUNIOR_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_PAJERO IO_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_PAJERO MINI_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_PAJERO_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_PROUDIA_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_TOPPO BJ WIDE_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_TOPPO BJ_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_TOWN BOX WIDE_.json" />
+    <None Include="AppData\RESULT\MITSUBISHI\result_MITSUBISHI_TOWN BOX_.json" />
+    <None Include="AppData\ALL\result_NISSAN.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_01.03.2014_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_AD MAX VAN 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_AD MAX VAN_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_AD MAX WAGON_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_AD VAN 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_AD VAN_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_AD WAGON 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_AD WAGON_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_AD_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_AVENIR 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_AVENIR CARGO 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_AVENIR CARGO_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_AVENIR_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_BASSARA 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_BASSARA_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_BLUEBIRD 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_BLUEBIRD SYLPHY 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_BLUEBIRD SYLPHY_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_BLUEBIRD_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CARAVAN HOMMY 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CARAVAN HOMMY 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CARAVAN HOMMY VAN 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CARAVAN HOMMY VAN_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CARAVAN HOMMY_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CARAVAN VAN 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CARAVAN VAN 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CARAVAN VAN_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CEDRIC 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CEDRIC 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CEDRIC_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CEFIRO 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CEFIRO 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CEFIRO_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CIMA 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CIMA_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CLIPPER PANEL VAN_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CLIPPER VAN_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CLIPPER_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CUBE 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_CUBE_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_DATSUN 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_DATSUN_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_ELGRAND %28CARAVAN HOMMY%29_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_EXPERT_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_FAIRLADY Z 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_FAIRLADY Z_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_GLORIA 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_GLORIA 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_GLORIA_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_INFINITY_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_LARGO 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_LARGO_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_LASCENE 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_LASCENE_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_LAUREL 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_LAUREL_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_LEPARD 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_LEPARD 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_LEPARD_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_LIBERTY 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_MARCH_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_MISTRAL_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_MOCO_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRAIRIE 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRAIRIE JOY 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRAIRIE LIBERTY 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRAIRIE_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRESAGE 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRESAGE_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRESIDENT_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRIMERA 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRIMERA PRIMERA CAMINO 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRIMERA PRIMERA CAMINO_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRIMERA UK 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRIMERA WAGON 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRIMERA WAGON_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PRIMERA_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PULSAR LUCINO 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_PULSAR LUCINO_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_REGULAS 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_REGULAS_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SAFARY 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SAFARY_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SERENA %28VANETTE%29 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SERENA %28VANETTE%29_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SERENA 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SERENA CARGO %28VANETTE%29 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SERENA CARGO %28VANETTE%29_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SERENA_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SILVIA 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SKYLINE 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SKYLINE 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SKYLINE_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_STAGEA 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_STAGEA 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_STAGEA_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SUNNY  LUCINO 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SUNNY CALIFORNIA_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SUNNY LUCINO_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SUNNY- LUCINO 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SUNNY- LUCINO_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_SUNNY_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_TEANA_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_TERRANO 3_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_TERRANO_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_TINO 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_TINO_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_WINGROAD 2_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_WINGROAD_.json" />
+    <None Include="AppData\RESULT\NISSAN\result_NISSAN_X-TRAIL 2_.json" />
+    <None Include="AppData\ALL\result_SUBARU.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_FORESTER 2_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_FORESTER_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_IMPREZA SEDAN 2_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_IMPREZA SEDAN COUPE 2_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_IMPREZA SEDAN COUPE_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_IMPREZA SEDAN_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_IMPREZA WAGON 2_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_IMPREZA WAGON_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_LEGACY 2_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_LEGACY B4 2_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_LEGACY B4 3_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_LEGACY B4_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_LEGACY TOURING WAGON 2_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_LEGACY TOURING WAGON 3_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_LEGACY TOURING WAGON_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_LEGACY_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_PLEO VAN_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_PLEO WAGON_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_R2_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_SAMBAR_.json" />
+    <None Include="AppData\RESULT\SUBARU\result_SUBARU_TRAVIQUE_.json" />
+    <None Include="AppData\ALL\result_SUZUKI.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_ALTO LAPIN_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_ALTO VAN_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_ALTO WORKS_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_ALTO_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_CARRY PANEL VAN_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_CARRY TRUCK_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_CARRY VAN_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_CHEVROLET CRUSE_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_CULTUS CRESCENT_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_CULTUS_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_ERIO_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_ESCUDO 2_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_ESCUDO_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_EVERY LANDY_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_EVERY VAN_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_EVERY WAGON_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_EVERY+_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_GRAND ESCUDO_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_JIMNY 1300 SIERRA_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_JIMNY SIERRA_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_JIMNY WIDE_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_JIMNY_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_KEI_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_MR WAGON_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_SWIFT_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_TWIN_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_WAGON R SOLIO 1_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_WAGON R SOLIO_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_WAGON R WIDE 1_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_WAGON R+ 1_.json" />
+    <None Include="AppData\RESULT\SUZUKI\result_SUZUKI_WAGON R_.json" />
+    <None Include="AppData\ALL\result_TOYOTA.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_ALLEX_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_ALLION_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_ALPHARD 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_ALPHARD_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_ALTEZZA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_ALTEZZA GITA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_ALTEZZA GITA 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_ARISTO 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_ARISTO 4_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_AVALON 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_AVENSIS 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_BB_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_BREVIS 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_BREVIS_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CALDINA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CALDINA VAN 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CALDINA VAN_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CALDINA WAGON 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CALDINA WAGON_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CALDINA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CAMRY 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CAMRY GRACIA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CAMRY_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CARINA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CARINA ED 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CARINA ED_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CARINA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CAROLLA CERES_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CELICA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CELICA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CELSIOR 4_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CELSIOR_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CENTURY 5_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CHASER 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CHASER 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CHASER_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_COROLLA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_COROLLA FIELDER_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_COROLLA FX_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_COROLLA II_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_COROLLA LEVIN_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_COROLLA RUNX_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_COROLLA SPASIO_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_COROLLA VAN 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_COROLLA VAN_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_COROLLA WAGON 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_COROLLA WAGON_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_COROLLA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CORONA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CORONA EXIV 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CORONA EXIV_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CORONA PREMIO 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CORONA PREMIO_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CORONA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CORSA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CRESTA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CRESTA 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CRESTA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CROWN 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CROWN 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CROWN ESTATE 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CROWN ESTATE 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CROWN ESTATE_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CROWN HARD TOP 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CROWN HARD TOP 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CROWN HARD TOP_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CROWN MAJESTA 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CROWN MAJESTA 4_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CROWN MAJESTA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CROWN_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CURREN 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CURREN_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_CYNOS_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_ESTIMA 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_ESTIMA EMINA LUCIDA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_ESTIMA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_FUNCARGO_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_GAIA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_GAIA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_GRAND HIACE 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_GRAND HIACE_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_GRANVIA 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_GRANVIA VAN_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_GRANVIA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HARRIER 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HARRIER_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HIACE VAN 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HIACE VAN 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HIACE VAN_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HIACE WAGON 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HIACE WAGON 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HIACE WAGON_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HILUX 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HILUX 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HILUX SURF 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HILUX SURF_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_HILUX_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_IPSUM 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_IPSUM_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_IST_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_KLUGER V L 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_KLUGER V L_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_LAND CRUISER 100_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_LAND CRUISER 80 4_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_LAND CRUISER 80_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_LAND CRUISER PRADO 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_LAND CRUISER PRADO_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_LITE ACE NOAH 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_LITE ACE NOAH_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_LITE ACE VAN 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_LITE ACE VAN_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_MARK II 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_MARK II 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_MARK II BLIT 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_MARK II BLIT_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_MARK II WAGON QUALIS 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_MARK II WAGON QUALIS_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_MARK II_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_MEGA CRUISER_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_MR-S_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_NADIA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_NOAH 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_OPA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_OPA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PASSO 1_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PASSO_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PLATZ 1_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PLATZ_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PORTE_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PREMIO 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PREMIO_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PRIUS_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PROBOX VAN_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PROBOX WAGON_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PROGRESS 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PROGRESS_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_PRONARD 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_RAUM_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_RAV4 L J 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_RAV4 L J_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SIENTA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SOARER 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SOARER 4_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SOARER_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SPRINTER 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SPRINTER CARIB_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SPRINTER MARINO_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SPRINTER TRUENO_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SPRINTER VAN 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SPRINTER VAN_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SPRINTER WAGON 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SPRINTER WAGON_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SPRINTER_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_STARLET_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SUCCEED_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_SUPRA 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_TERCEL_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_TOWN ACE NOAH 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_TOWN ACE NOAH_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_VEROSSA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_VEROSSA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_VISTA 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_VISTA ARDEO 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_VISTA ARDEO_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_VISTA_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_VITZ 1_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_VITZ_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_VOXY 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_WILL CIPHER_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_WILL VI_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_WILL VS_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_WINDOM 3_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_WINDOM_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_WISH 2_.json" />
+    <None Include="AppData\RESULT\TOYOTA\result_TOYOTA_WISH_.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

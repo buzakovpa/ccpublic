@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Контакты";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Контакты <small>Оставляйте отзывы!</small></h1>
+            <ol class="breadcrumb">
+                <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+                <li class="active">Контакты</li>
+            </ol>
+        </div>
+        <div class="col-lg-12">
+            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=mVNN9u5v0ObOh38sqCKL2evBI99s7bYb&height=400">
+            </script>
+        </div>
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="col-sm-8">
+            <h3>Оставить отзыв!</h3>
+            <p>Вы можете оставить любое пожелание или отзыв. Наша команда всегда рада общаться со своими клиентами, доброжелателями и завистиками.</p>
+            <form action="contact-form-submission.php" method="POST" role="form">
+                <div class="row">
+                    <div class="form-group col-lg-4">
+                        <label for="input1">Имя</label>
+                        <input type="text" id="input1" class="form-control" name="contact_name">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="input2">Почта</label>
+                        <input type="email" id="input2" class="form-control" name="contact_email">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="input3">Телефон</label>
+                        <input type="phone" id="input3" class="form-control" name="contact_phone">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-12">
+                        <label for="input4">Сообщение</label>
+                        <textarea id="input4" rows="6" class="form-control" name="contact_message"></textarea>
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <input type="hidden" value="contact" name="save">
+                        <button class="btn btn-primary" type="submit">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4">
+            <h3>Customs Center</h3>
+            <h4>Комплексные решения для автомобиля</h4>
+            <p>
+                ул. Гурзуфская 48Г<br>
+                г. Екатеринбург<br>
+            </p>
+            <p><i class="fa fa-phone"></i> <abbr title="Телефон">Т</abbr>: +7 (963) 036-0202</p>
+            <p><i class="fa fa-envelope-o"></i> <abbr title="Почта">П</abbr>: <a href="mailto:info@customscenter.ru">info@customscenter.ru</a></p>
+            <p><i class="fa fa-clock-o"></i> <abbr title="График Работы">ГР</abbr>: Понедельник - Пятница: с 9:00 до 17:00</p>
+            <ul class="list-unstyled list-inline list-social-icons">
+                <li class="tooltip-social facebook-link"><a title="Facebook" data-placement="top" data-toggle="tooltip" href="#facebook-page"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                <li class="tooltip-social linkedin-link"><a title="LinkedIn" data-placement="top" data-toggle="tooltip" href="#linkedin-company-page"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                <li class="tooltip-social twitter-link"><a title="Twitter" data-placement="top" data-toggle="tooltip" href="#twitter-profile"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                <li class="tooltip-social google-plus-link"><a title="Google+" data-placement="top" data-toggle="tooltip" href="#google-plus-page"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            </ul>
+        </div>
+    </div><!-- /.row -->
+</div>

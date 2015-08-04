@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC.EF", "CC.EF\CC.EF.csproj", "{6C072B19-55A7-4C5A-B660-4299DFFFC371}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC.MODELS", "CC.MODELS\CC.MODELS.csproj", "{D40D4E91-36C8-49A0-9527-C714B77FA4FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC.OIL.IMPORT", "CC.OIL.IMPORT\CC.OIL.IMPORT.csproj", "{456A6552-6E17-4D12-8625-2664463B242C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC.WEB", "CC.WEB\CC.WEB.csproj", "{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2555F17B-FA47-4114-9578-537769DF1249}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\AppData\Local\Microsoft\VisualStudio\11.0\Extensions\mjibmfmt.jqu\schemas\WE-Palette.css = ..\..\..\AppData\Local\Microsoft\VisualStudio\11.0\Extensions\mjibmfmt.jqu\schemas\WE-Palette.css
+		WE-settings.xml = WE-settings.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC.BUSINESS", "CC.BUSINESS\CC.BUSINESS.csproj", "{903CA013-E686-483B-B2CD-B070BF107D5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C072B19-55A7-4C5A-B660-4299DFFFC371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C072B19-55A7-4C5A-B660-4299DFFFC371}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C072B19-55A7-4C5A-B660-4299DFFFC371}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C072B19-55A7-4C5A-B660-4299DFFFC371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D40D4E91-36C8-49A0-9527-C714B77FA4FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D40D4E91-36C8-49A0-9527-C714B77FA4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D40D4E91-36C8-49A0-9527-C714B77FA4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D40D4E91-36C8-49A0-9527-C714B77FA4FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{456A6552-6E17-4D12-8625-2664463B242C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{456A6552-6E17-4D12-8625-2664463B242C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{456A6552-6E17-4D12-8625-2664463B242C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{456A6552-6E17-4D12-8625-2664463B242C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{903CA013-E686-483B-B2CD-B070BF107D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{903CA013-E686-483B-B2CD-B070BF107D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{903CA013-E686-483B-B2CD-B070BF107D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{903CA013-E686-483B-B2CD-B070BF107D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

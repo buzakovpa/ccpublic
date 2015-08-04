@@ -1,0 +1,4 @@
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.MODELS\bin\Debug\CC.MODELS.dll
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.MODELS\bin\Debug\CC.MODELS.pdb
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.MODELS\obj\Debug\CC.MODELS.dll
+C:\Users\buzakovpa\YandexDisk\Project\CustomsCenter\CC.MODELS\obj\Debug\CC.MODELS.pdb

@@ -1,0 +1,66 @@
+﻿@using CC.MODELS
+@using CC.WEB.Helpers
+@model CC.MODELS.UiElement
+
+@{
+    ViewBag.Title = "Детализация";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Детализация
+                <small>
+                    @Html.GetSubtitles(UiElement.Aliass.AdminShopDetails)
+                </small>
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    @Html.ActionLink("Главная", "Index", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Подзаголовки", "Index", "Subtitles")
+                </li>
+                <li class="active">Детализация</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12">
+                <fieldset>
+                    <legend>Подзаголовок</legend>
+
+                    <div class="form-group">
+                        <label for="Element_Alias" class="col-lg-2 control-label">Alias</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="Element_Alias" name="Element.Alias" placeholder="Alias" readonly="readonly" disabled="disabled" value="@Model.Alias">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Element_Value" class="col-lg-2 control-label">Значение</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="Element_Value" name="Element.Value" placeholder="Значение" readonly="readonly" disabled="disabled" value="@Model.Value">
+                            <div class="checkbox">
+                                <label>
+                                    @Html.CheckBoxFor(a => a.Show, htmlAttributes: new { @readonly="readonly", @disabled="disabled"}) Показывать
+
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <a class="btn btn-default" href="@Url.Action("Index")">Отмена</a>
+                            <a class="btn btn-primary" href="@Url.Action("Edit", routeValues: new {id = Model.UiElementId})">Редактирование</a>
+                            <a class="btn btn-danger" href="@Url.Action("Delete", routeValues: new {id = Model.UiElementId})">Удаление</a>
+                        </div>
+                    </div>
+
+                </fieldset>
+        </div>
+    </div>
+</div>

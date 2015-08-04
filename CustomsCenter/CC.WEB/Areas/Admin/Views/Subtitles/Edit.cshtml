@@ -1,0 +1,75 @@
+﻿@using CC.MODELS
+@using CC.WEB.Helpers
+@using Microsoft.Ajax.Utilities
+@model CC.WEB.Areas.Admin.ViewModels.Subtitles.SubtitlesEditModel
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                @Model.Title
+                <small>
+                    @Html.GetSubtitles(UiElement.Aliass.AdminShopEdit)
+                </small>
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    @Html.ActionLink("Главная", "Index", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Подзаголовки", "Index", "Subtitles")
+                </li>
+                <li class="active">
+                    @Model.Title
+                </li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12">
+            
+            <form class="form-horizontal" method="POST">
+                @Html.HiddenFor(a=>a.Element.UiElementId)
+
+                <fieldset>
+                    <legend>Подзаголовок</legend>
+
+                    <div class="form-group">
+                        <label for="Element_Alias" class="col-lg-2 control-label">Alias</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="Element_Alias" name="Element.Alias" 
+                                placeholder="Alias" value="@Model.Element.Alias">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Element_Value" class="col-lg-2 control-label">Значение</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="Element_Value" name="Element.Value" 
+                                placeholder="Значение" value="@Model.Element.Value" />
+                            <div class="checkbox">
+                                <label>
+                                    @Html.CheckBoxFor(a=>a.Element.Show) Показывать
+
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <a class="btn btn-default" href="@Url.Action("Index")">Отмена</a>
+                            <button type="submit" class="btn btn-primary">Сохранить</button>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
