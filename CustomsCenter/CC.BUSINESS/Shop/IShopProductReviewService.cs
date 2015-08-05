@@ -1,14 +1,11 @@
-﻿using CC.MODELS;
+﻿using System;
+using CC.MODELS;
 
 namespace CC.BUSINESS.Shop
 {
 
-    interface IShopProductReviewService
+    public interface IShopProductReviewService : IBaseEntityService<ShopProductReview>, IDisposable
     {
-        ShopProductReview Find(int id);
-        ShopProductReview Create(ShopProductReview newReview);
-        ShopProductReview Update(ShopProductReview review);
-        void Remove(int id);
     }
 
 }
