@@ -7181,4 +7181,11 @@ a.list-group-item-danger.active:focus {
 .popover {
   color: #555555;
 }
+.ratings {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+.ratings p {
+  margin-bottom: 0px;
+}
 /*# sourceMappingURL=bootstrap.css.map */
