@@ -47,7 +47,11 @@
                                 <td>
                                     <a href="@Url.Action("Details", routeValues: new {id = item.UiElementId})">@item.UiElementId</a>
                                 </td>
-                                <td>@item.Alias</td>
+                                <td>
+                                    @{
+                                        var alias = (UiElement.Aliass)item.Alias;
+                                    }
+                                    @Html.DisplayFor(a => alias)</td>
                                 <td>@item.Value</td>
                                 <td>@item.Show</td>
                             </tr>

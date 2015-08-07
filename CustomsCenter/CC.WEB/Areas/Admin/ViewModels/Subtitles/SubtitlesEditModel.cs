@@ -18,6 +18,7 @@ namespace CC.WEB.Areas.Admin.ViewModels.Subtitles
         public SubtitlesEditModel(UiElement element)
         {
             Element = element;
+            Alias = (UiElement.Aliass)element.Alias;
         }
     }
 

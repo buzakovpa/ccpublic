@@ -38,6 +38,7 @@ namespace CC.WEB.Areas.Admin.Controllers
         public ActionResult Create(SubtitlesCreateModel viewModel)
         {
             if (ModelState.IsValid) {
+                viewModel.Element.Alias = (int)viewModel.Alias;
                 _service.Create(viewModel.Element);
 
                 return RedirectToAction("Index");
@@ -57,6 +58,7 @@ namespace CC.WEB.Areas.Admin.Controllers
         public ActionResult Edit(SubtitlesEditModel viewModel)
         {
             if (ModelState.IsValid) {
+                viewModel.Element.Alias = (int)viewModel.Alias;
                 _service.Update(viewModel.Element);
 
                 return RedirectToAction("Index");

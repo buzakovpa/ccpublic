@@ -42,8 +42,7 @@
                     <div class="form-group">
                         <label for="Element_Alias" class="col-lg-2 control-label">Alias</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="Element_Alias" name="Element.Alias" 
-                                placeholder="Alias" value="@Model.Element.Alias">
+                            @Html.EnumDropDownList("Alias", Model.Alias, new { @class = "form-control" })
                         </div>
                     </div>
 

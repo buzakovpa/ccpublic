@@ -1,6 +1,5 @@
 ﻿using System.Data.Entity;
 using System.Diagnostics;
-using System.Linq.Expressions;
 using CC.EF.Configurations;
 using CC.MODELS;
 
@@ -22,7 +21,7 @@ namespace CC.EF
         public IDbSet<UiImage> UiImages { get; set; }
 
         public AppContext()
-            : base(@"Data Source=(localdb)\Projects;Initial Catalog=local_db;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")
+            : base(@"Data Source=(localdb)\ProjectsV12;Initial Catalog=local_db;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")
         {
         }
 

@@ -65,6 +65,10 @@
     <Compile Include="Migrations\201508042302458_AddShopModels.Designer.cs">
       <DependentUpon>201508042302458_AddShopModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201508071506387_UpdateShopModels.cs" />
+    <Compile Include="Migrations\201508071506387_UpdateShopModels.Designer.cs">
+      <DependentUpon>201508071506387_UpdateShopModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -87,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201508042302458_AddShopModels.resx">
       <DependentUpon>201508042302458_AddShopModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508071506387_UpdateShopModels.resx">
+      <DependentUpon>201508071506387_UpdateShopModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
