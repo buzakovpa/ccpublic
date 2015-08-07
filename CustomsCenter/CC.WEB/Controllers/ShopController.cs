@@ -1,18 +1,24 @@
 ﻿using System.Web.Mvc;
+using System.Web.Routing;
+using CC.WEB.ViewModels;
 
 namespace CC.WEB.Controllers
 {
 
     public class ShopController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(ShopViewModel viewmodel)
         {
-            return View();
+            viewmodel.Load();
+
+            return View(viewmodel);
         }
 
-        public ActionResult Details()
+        public ActionResult Details(ShopDetailsViewModel viewmodel)
         {
-            return View();
+            viewmodel.Load();
+
+            return View(viewmodel);
         }
     }
 

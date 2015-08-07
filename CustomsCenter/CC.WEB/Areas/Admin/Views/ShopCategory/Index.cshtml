@@ -35,6 +35,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th>Alias</th>
                         <th>Название</th>
                         <th>Показывается</th>
                     </tr>
@@ -46,6 +47,7 @@
                                 <td>
                                     <a href="@Url.Action("Details", routeValues: new {id = item.ShopCategoryId})">@item.ShopCategoryId</a>
                                 </td>
+                                <td>@item.UrlAlias</td>
                                 <td>@item.Title</td>
                                 <td>@item.Show</td>
                             </tr>

@@ -8,6 +8,7 @@ namespace CC.MODELS
         public int ShopCategoryId { get; set; }
 
         public string Title { get; set; }
+        public string UrlAlias { get; set; }
         public bool Show { get; set; }
 
         public virtual List<ShopProduct> Products { get; set; }

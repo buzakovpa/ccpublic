@@ -1,6 +1,8 @@
 ﻿@using CC.MODELS
 @using CC.WEB.Helpers
 
+@model CC.WEB.ViewModels.ShopDetailsViewModel
+
 @{
     ViewBag.Title = "Описание товара | Магазин";
 }
@@ -17,6 +19,7 @@
                     @Html.ActionLink("Главная", "Index", "Home")
                 </li>
                 <li>@Html.ActionLink("Магазин", "Index", "Shop")</li>
+                <li>@Html.ActionLink(Model.CategoryName, "Index", "Shop")</li>
                 <li class="active">Товар 1</li>
             </ol>
         </div>
@@ -26,9 +29,10 @@
         <div class="col-md-3">
             <h2>Каталог</h2>
             <div class="list-group">
-                <a href="#" class="list-group-item active">Category 1</a>
-                <a href="#" class="list-group-item">Category 2</a>
-                <a href="#" class="list-group-item">Category 3</a>
+                @foreach (var item in Model.Categories)
+                {
+                    <a href="@Url.Action("Index", routeValues: new {alias = item.UrlAlias})" class="list-group-item @(item.UrlAlias == Model.Alias ? "active" : "")">@item.Title</a>
+                }
             </div>
         </div>
         <div class="col-md-9">
