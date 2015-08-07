@@ -188,7 +188,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ShopCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\SubtitlesController.cs" />
+    <Compile Include="Areas\Admin\ViewModels\Shop\ShopCategoryIndexModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\Shop\ShopCategoryCreateModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\Shop\SubtitlesEditModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\Subtitles\SubtitlesCreateModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\Subtitles\SubtitlesEditModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\Subtitles\SubtitlesIndexModel.cs" />
@@ -256,6 +260,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Areas\Admin\Views\ShopCategory\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ShopCategory\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ShopCategory\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ShopCategory\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ShopCategory\Index.cshtml" />
     <None Include="Properties\PublishProfiles\buzakov %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\customscenter.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
