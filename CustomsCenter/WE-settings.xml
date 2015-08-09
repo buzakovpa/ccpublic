@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <webessentials version="1.9">
   <settings>
-    <CoffeeScriptGenerateJsFile>True</CoffeeScriptGenerateJsFile>
-    <CoffeeScriptMinify>True</CoffeeScriptMinify>
-    <CoffeeScriptShowPreviewWindow>True</CoffeeScriptShowPreviewWindow>
-    <CoffeeScriptWrapClosure>True</CoffeeScriptWrapClosure>
+    <CoffeeScriptCompileOnBuild>false</CoffeeScriptCompileOnBuild>
+    <CoffeeScriptCompileToFolder>false</CoffeeScriptCompileToFolder>
+    <CoffeeScriptEnableIced>false</CoffeeScriptEnableIced>
+    <CoffeeScriptGenerateJsFile>true</CoffeeScriptGenerateJsFile>
+    <CoffeeScriptMinify>true</CoffeeScriptMinify>
+    <CoffeeScriptShowPreviewWindow>true</CoffeeScriptShowPreviewWindow>
+    <CoffeeScriptWrapClosure>true</CoffeeScriptWrapClosure>
     <CssAutoCloseCurlyBraces>true</CssAutoCloseCurlyBraces>
     <CssEnableGzipping>false</CssEnableGzipping>
     <CssEnableMinification>true</CssEnableMinification>

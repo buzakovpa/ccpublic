@@ -1,5 +1,10 @@
+﻿using System.Collections.Generic;
+using CC.EF.Migrations.Seeds;
+using CC.MODELS;
+
 namespace CC.EF.Migrations
 {
+
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -14,18 +19,16 @@ namespace CC.EF.Migrations
 
         protected override void Seed(CC.EF.AppContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            var seeds = new List<ISeed> {
+                new ShopCategoriesSeed()
+            };
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            foreach (var item in seeds) {
+                item.Seed(context);
+            }
+
+            context.SaveChanges();
         }
     }
+
 }

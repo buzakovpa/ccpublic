@@ -74,6 +74,8 @@
       <DependentUpon>201508071623325_UpdateShopModels2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Seeds\ISeed.cs" />
+    <Compile Include="Migrations\Seeds\ShopCategoriesSeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
