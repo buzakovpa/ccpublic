@@ -1,0 +1,70 @@
+﻿@using CC.MODELS
+@using CC.WEB.Helpers
+@model CC.WEB.Areas.Admin.ViewModels.Shop.ShopProductIndexModel
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                @Model.Title
+                <small>
+                    @Html.GetSubtitles(UiElement.Aliass.AdminShop)
+                </small>
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    @Html.ActionLink("Главная", "Index", "Home")
+                </li>
+                <li class="active">@Model.Title</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <a class="btn btn-default" href="@Url.Action("Create")">Создать</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Alias</th>
+                        <th>Категория</th>
+                        <th>Название</th>
+                        <th>Цена закупки</th>
+                        <th>Цена продажи</th>
+                        <th>Показывается</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Products.Any()) {
+                        foreach (var item in Model.Products) {
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("Details", new {id = item.ShopProductId})">@item.ShopProductId</a>
+                                </td>
+                                <td>@item.UrlAlias</td>
+                                <td>@item.Category.Title</td>
+                                <td>@item.Title</td>
+                                <td>@item.PurchasePrice</td>
+                                <td>@item.SellingPrice</td>
+                                <td>@item.Show</td>
+                            </tr>
+                        }
+                    } else {
+                        <tr>
+                            <td>Данных не найдено...</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

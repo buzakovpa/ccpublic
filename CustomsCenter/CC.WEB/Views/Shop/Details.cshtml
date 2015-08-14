@@ -19,8 +19,8 @@
                     @Html.ActionLink("Главная", "Index", "Home")
                 </li>
                 <li>@Html.ActionLink("Магазин", "Index", "Shop")</li>
-                <li>@Html.ActionLink(Model.CategoryName, "Index", "Shop")</li>
-                <li class="active">Товар 1</li>
+                <li>@Html.ActionLink(Model.CategoryTitle, "Index", "Shop", new {category = Model.Category}, null)</li>
+                <li class="active">@Model.CurrentProduct.Title</li>
             </ol>
         </div>
     </div>
@@ -29,9 +29,8 @@
         <div class="col-md-3">
             <h2>Каталог</h2>
             <div class="list-group">
-                @foreach (var item in Model.Categories)
-                {
-                    <a href="@Url.Action("Index", routeValues: new {alias = item.UrlAlias})" class="list-group-item @(item.UrlAlias == Model.Alias ? "active" : "")">@item.Title</a>
+                @foreach (var item in Model.Categories) {
+                    <a href="@Url.Action("Index", routeValues: new {category = item.UrlAlias})" class="list-group-item @(item.UrlAlias == Model.Category ? "active" : "")">@item.Title</a>
                 }
             </div>
         </div>
@@ -39,25 +38,14 @@
             <div class="thumbnail">
                 <img class="img-responsive" src="http://placehold.it/840x300" alt="">
                 <div class="caption">
-                    <h4 class="pull-right">$24.99</h4>
-                    <h4><a href="#">Товар 1</a>
+                    <h4 class="pull-right">@Model.CurrentProduct.SellingPrice.ToString("#р")</h4>
+                    <h4><a href="#">@Model.CurrentProduct.Title</a>
                     </h4>
-                    <p>See more snippets like these online store reviews at <a target="_blank" href="http://bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                    <p>Want to make these reviews work? Check out
-                        <strong><a href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this building a review system tutorial</a>
-                        </strong>over at maxoffsky.com!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <p>@Html.Raw(Model.CurrentProduct.Description)</p>
                 </div>
                 <div class="ratings">
-                    <p class="pull-right">3 reviews</p>
-                    <p>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                        4.0 stars
-                    </p>
+                    <p class="pull-right">@(Model.CurrentProduct.GetReviews().Count()) отзывов</p>
+                    @Model.CurrentProduct.GetStars(true)
                 </div>
             </div>
             <div class="well">
@@ -65,6 +53,7 @@
                     <a class="btn btn-success">Оставить отзыв</a>
                 </div>
                 <hr>
+                
                 <div class="row">
                     <div class="col-md-12">
                         <span class="glyphicon glyphicon-star"></span>

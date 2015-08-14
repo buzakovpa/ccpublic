@@ -1,4 +1,6 @@
 using CC.BUSINESS;
+using CC.BUSINESS.Shop;
+using CC.EF;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(CC.WEB.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(CC.WEB.App_Start.NinjectWebCommon), "Stop")]
@@ -48,6 +50,7 @@ namespace CC.WEB.App_Start
 
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<AppContext>().To<AppContext>().InRequestScope();
             kernel.Load<BusinessNinjectModule>();
         }
     }

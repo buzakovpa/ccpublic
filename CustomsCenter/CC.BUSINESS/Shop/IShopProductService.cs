@@ -6,6 +6,7 @@ namespace CC.BUSINESS.Shop
 
     public interface IShopProductService : IBaseEntityService<ShopProduct>, IDisposable
     {
+        ShopProduct FindByAlias(string alias);
     }
 
 }

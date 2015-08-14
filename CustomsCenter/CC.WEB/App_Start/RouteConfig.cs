@@ -10,14 +10,14 @@ namespace CC.WEB
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
                 "ShopDetailsRoute",
-                "{controller}/{alias}/{alias2}",
+                "{controller}/{category}/{product}",
                 new { area = "", controller = "Home", action = "Details" },
                 new[] { "CC.WEB.Controllers" }
                 );
 
             routes.MapRoute(
                 "ShopRoute",
-                "{controller}/{alias}",
+                "{controller}/{category}",
                 new { area = "", controller = "Home", action = "Index" },
                 new[] { "CC.WEB.Controllers" }
                 );

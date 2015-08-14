@@ -64,8 +64,7 @@ namespace CC.BUSINESS
 
         public virtual TModel Update(TModel entity)
         {
-            DbSet.AddOrUpdate(entity);
-            Context.SaveChanges();
+            Context.SaveChanges( );
 
             return entity;
         }

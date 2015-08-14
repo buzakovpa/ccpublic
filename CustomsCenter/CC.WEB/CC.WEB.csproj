@@ -187,12 +187,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ShopProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ShopCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\SubtitlesController.cs" />
     <Compile Include="Areas\Admin\ViewModels\Shop\ShopCategoryIndexModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\Shop\ShopCategoryCreateModel.cs" />
-    <Compile Include="Areas\Admin\ViewModels\Shop\SubtitlesEditModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\Shop\ShopProductCreateModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\Shop\ShopProductEditModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\Shop\ShopProductIndexModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\Shop\ShopCategoryEditModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\Subtitles\SubtitlesCreateModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\Subtitles\SubtitlesEditModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\Subtitles\SubtitlesIndexModel.cs" />
@@ -209,11 +213,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HtmlHelpers.cs" />
+    <Compile Include="Helpers\ShopProductHelpers.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
-    <Compile Include="ViewModels\ShopViewModels.cs" />
+    <Compile Include="ViewModels\ShopDetailsViewModel.cs" />
+    <Compile Include="ViewModels\ShopViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -266,6 +272,11 @@
     <Content Include="Areas\Admin\Views\ShopCategory\Details.cshtml" />
     <Content Include="Areas\Admin\Views\ShopCategory\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\ShopCategory\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ShopProduct\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ShopProduct\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ShopProduct\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ShopProduct\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ShopProduct\Index.cshtml" />
     <None Include="Properties\PublishProfiles\buzakov %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\customscenter.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />

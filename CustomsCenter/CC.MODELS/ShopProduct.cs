@@ -6,6 +6,7 @@ namespace CC.MODELS
     public class ShopProduct : IDeletedEntity
     {
         public int ShopProductId { get; set; }
+        public string UrlAlias { get; set; }
 
         public string Title { get; set; }
         public string Description { get; set; }
