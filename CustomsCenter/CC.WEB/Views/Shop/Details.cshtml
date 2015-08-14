@@ -18,8 +18,8 @@
                 <li>
                     @Html.ActionLink("Главная", "Index", "Home")
                 </li>
-                <li>@Html.ActionLink("Магазин", "Index", "Shop")</li>
-                <li>@Html.ActionLink(Model.CategoryTitle, "Index", "Shop", new {category = Model.Category}, null)</li>
+                <li>@Html.ActionLink("Магазин", "Index", "Shop", routeValues: null, htmlAttributes: null)</li>
+                <li>@Html.ActionLink(Model.CategoryTitle, "Index", "Shop")</li>
                 <li class="active">@Model.CurrentProduct.Title</li>
             </ol>
         </div>
@@ -39,9 +39,8 @@
                 <img class="img-responsive" src="http://placehold.it/840x300" alt="">
                 <div class="caption">
                     <h4 class="pull-right">@Model.CurrentProduct.SellingPrice.ToString("#р")</h4>
-                    <h4><a href="#">@Model.CurrentProduct.Title</a>
-                    </h4>
-                    <p>@Html.Raw(Model.CurrentProduct.Description)</p>
+                    <h4><a href="#">@Model.CurrentProduct.Title</a></h4>
+                    @Html.Raw(Model.CurrentProduct.FullDescription)
                 </div>
                 <div class="ratings">
                     <p class="pull-right">@(Model.CurrentProduct.GetReviews().Count()) отзывов</p>

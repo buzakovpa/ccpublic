@@ -42,7 +42,7 @@
                                 <div class="caption">
                                     <h4 class="pull-right">@product.SellingPrice.ToString("#р")</h4>
                                     <h4><a href="@Url.Action("Details", new {category = Model.Category, product = product.UrlAlias})">@product.Title</a></h4>
-                                    <p>@Html.Raw(product.Description)</p>
+                                    @Html.Raw(product.ShortDescription)
                                 </div>
                                 <div class="ratings">
                                     <p class="pull-right">@(product.GetReviews().Count()) отзывов</p>

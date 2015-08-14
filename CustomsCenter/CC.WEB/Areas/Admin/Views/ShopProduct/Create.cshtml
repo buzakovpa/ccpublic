@@ -65,9 +65,16 @@
                     </div>
                     
                     <div class="form-group">
-                        @Html.LabelFor(a => a.Product.Description, "Описание", new {@class="col-lg-2 control-label"})
+                        @Html.LabelFor(a => a.Product.ShortDescription, "Краткое описание", new { @class = "col-lg-2 control-label" })
                         <div class="col-lg-10">
-                            @Html.TextAreaFor(a => a.Product.Description, new {@class="form-control", @placeholder="Описание"})
+                            @Html.TextAreaFor(a => a.Product.ShortDescription, new { @class = "form-control", @placeholder = "Описание" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(a => a.Product.FullDescription, "Описание", new {@class="col-lg-2 control-label"})
+                        <div class="col-lg-10">
+                            @Html.TextAreaFor(a => a.Product.FullDescription, new { @class = "form-control", @placeholder = "Описание" })
                         </div>
                     </div>
                     

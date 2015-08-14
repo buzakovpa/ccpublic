@@ -76,7 +76,8 @@ namespace CC.WEB.Areas.Admin.Controllers
                 
                 entity.UrlAlias = viewModel.Product.UrlAlias;
                 entity.Title = viewModel.Product.Title;
-                entity.Description = viewModel.Product.Description;
+                entity.ShortDescription = viewModel.Product.ShortDescription;
+                entity.FullDescription = viewModel.Product.FullDescription;
                 entity.Show = viewModel.Product.Show;
                 entity.PurchasePrice = viewModel.Product.PurchasePrice;
                 entity.SellingPrice = viewModel.Product.SellingPrice;
