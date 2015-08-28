@@ -58,8 +58,29 @@
                         <a href="#">Не нашли товар?</a>
                     </h4>
                     <p>Вы можете написать нам об этом товаре и скорей всего он появится у нас уже на следующей неделе.</p>
-                    <a class="btn btn-primary" target="_blank" href="@Url.Action("Order", "Callback", routeValues: new {area = ""})">Написать нам</a>
+@*                    <a class="btn btn-primary"  href="@Url.Action("Order", "Callback", routeValues: new {area = ""})">Написать нам</a>*@
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shop-modal">
+                        Написать нам
+                    </button>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="shop-modal" tabindex="-1" role="dialog" aria-labelledby="shop-modal-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="shop-modal-label">Мы благодарны вам!</h4>
+            </div>
+            <div class="modal-body">
+                <p>Спасибо вам за то что, помогаете нам стать лучше.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Отправить</button>
             </div>
         </div>
     </div>
