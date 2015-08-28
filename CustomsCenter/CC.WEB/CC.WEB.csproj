@@ -248,6 +248,7 @@
     <Content Include="Content\less\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="js\ya.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="Content\less\fonts\glyphicons-halflings-regular.woff2" />

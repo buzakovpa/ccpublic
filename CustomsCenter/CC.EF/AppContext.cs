@@ -21,8 +21,8 @@ namespace CC.EF
         public IDbSet<UiImage> UiImages { get; set; }
 
         public AppContext()
-            // : base(@"Data Source=(localdb)\ProjectsV12;Initial Catalog=local_db;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")
-            : base(@"Data Source=(localdb)\Projects;Initial Catalog=local_db;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")
+            : base(@"Data Source=luueeyt55v.database.windows.net;Initial Catalog=CustomsCenterDatabase;Integrated Security=False;User ID=pbuzakov;Password=99v6yRgx;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False")
+//            : base(@"Data Source=(localdb)\Projects;Initial Catalog=local_db;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")
         {
         }
 
