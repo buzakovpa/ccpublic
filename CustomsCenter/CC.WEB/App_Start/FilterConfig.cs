@@ -1,5 +1,5 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using CC.WEB.Infrastructure.Filters;
 
 namespace CC.WEB
 {
@@ -8,6 +8,7 @@ namespace CC.WEB
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new UtmFilter());
         }
     }
 }

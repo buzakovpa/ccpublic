@@ -41,11 +41,6 @@ namespace CC.EF.Migrations.Seeds
                     Show= true,
                 },
 
-                new ShopCategory {
-                    UrlAlias = "idemitsu",
-                    Title = "Idemitsu",
-                    Show= true,
-                },
             };
 
             foreach (var item in categories) {
