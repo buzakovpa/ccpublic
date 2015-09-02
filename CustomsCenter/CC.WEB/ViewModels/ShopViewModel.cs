@@ -3,6 +3,8 @@ using System.Linq;
 using System.Web.Mvc;
 using CC.BUSINESS.Shop;
 using CC.MODELS;
+using Skybrud.Social.Instagram;
+using Skybrud.Social.Instagram.Options.Users;
 
 namespace CC.WEB.ViewModels
 {

@@ -65,6 +65,8 @@ namespace CC.WEB.Areas.Admin.Controllers
             return View(viewmodel);
         }
 
+//        1439051577.0410587.8bc939b7a78c4edb80aa033f7c128238
+//
         [HttpPost]
         [ValidateInput(false)]  
         public ActionResult Edit(ShopProductEditModel viewModel)
